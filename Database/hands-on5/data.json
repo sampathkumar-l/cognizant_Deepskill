@@ -1,0 +1,193 @@
+[
+  {
+    "student_id": 1,
+    "course_code": "CS101",
+    "semester": "2022-ODD",
+    "rating": 5,
+    "comments": "Excellent teaching",
+    "tags": [
+      "challenging",
+      "well-structured",
+      "good-examples"
+    ],
+    "submitted_at": {
+      "$date": "2022-11-30T10:15:00Z"
+    },
+    "attachments": [
+      {
+        "filename": "notes.pdf",
+        "size_kb": 240
+      }
+    ]
+  },
+  {
+    "student_id": 2,
+    "course_code": "CS101",
+    "semester": "2022-ODD",
+    "rating": 4,
+    "comments": "Very good course",
+    "tags": [
+      "challenging",
+      "interactive"
+    ],
+    "submitted_at": {
+      "$date": "2022-11-28T10:15:00Z"
+    },
+    "attachments": [
+      {
+        "filename": "slides.pdf",
+        "size_kb": 180
+      }
+    ]
+  },
+  {
+    "student_id": 3,
+    "course_code": "CS101",
+    "semester": "2022-ODD",
+    "rating": 3,
+    "comments": "Average course",
+    "tags": [
+      "needs-practice"
+    ],
+    "submitted_at": {
+      "$date": "2022-11-25T10:15:00Z"
+    },
+    "attachments": [
+      {
+        "filename": "assignment.pdf",
+        "size_kb": 200
+      }
+    ]
+  },
+  {
+    "student_id": 4,
+    "course_code": "CS102",
+    "semester": "2022-EVEN",
+    "rating": 5,
+    "comments": "Excellent DBMS",
+    "tags": [
+      "database",
+      "easy"
+    ],
+    "submitted_at": {
+      "$date": "2022-12-01T10:15:00Z"
+    },
+    "attachments": [
+      {
+        "filename": "dbms.pdf",
+        "size_kb": 250
+      }
+    ]
+  },
+  {
+    "student_id": 5,
+    "course_code": "CS102",
+    "semester": "2022-EVEN",
+    "rating": 2,
+    "comments": "Needs improvement",
+    "tags": [
+      "hard"
+    ],
+    "submitted_at": {
+      "$date": "2022-12-03T10:15:00Z"
+    },
+    "attachments": [
+      {
+        "filename": "practice.pdf",
+        "size_kb": 150
+      }
+    ]
+  },
+  {
+    "student_id": 6,
+    "course_code": "EC101",
+    "semester": "2021-EVEN",
+    "rating": 4,
+    "comments": "Good subject",
+    "tags": [
+      "electronics"
+    ],
+    "submitted_at": {
+      "$date": "2021-11-15T10:15:00Z"
+    },
+    "attachments": [
+      {
+        "filename": "ec.pdf",
+        "size_kb": 175
+      }
+    ]
+  },
+  {
+    "student_id": 7,
+    "course_code": "ME101",
+    "semester": "2022-ODD",
+    "rating": 1,
+    "comments": "Very difficult",
+    "tags": [
+      "hard",
+      "lengthy"
+    ],
+    "submitted_at": {
+      "$date": "2022-11-18T10:15:00Z"
+    },
+    "attachments": [
+      {
+        "filename": "me.pdf",
+        "size_kb": 120
+      }
+    ]
+  },
+  {
+    "student_id": 8,
+    "course_code": "CS103",
+    "semester": "2022-ODD",
+    "rating": 5,
+    "comments": "Excellent OOP",
+    "tags": [
+      "oop",
+      "coding"
+    ],
+    "submitted_at": {
+      "$date": "2022-11-20T10:15:00Z"
+    },
+    "attachments": [
+      {
+        "filename": "oop.pdf",
+        "size_kb": 220
+      }
+    ]
+  },
+  {
+    "student_id": 9,
+    "course_code": "CS103",
+    "semester": "2022-ODD",
+    "rating": 4,
+    "comments": "Interesting programming",
+    "tags": [
+      "coding"
+    ],
+    "submitted_at": {
+      "$date": "2022-11-22T10:15:00Z"
+    },
+    "attachments": [
+      {
+        "filename": "lab.pdf",
+        "size_kb": 210
+      }
+    ]
+  },
+  {
+    "student_id": 10,
+    "course_code": "EC101",
+    "semester": "2022-ODD",
+    "rating": 5,
+    "comments": "Excellent practical sessions",
+    "tags": [
+      "electronics",
+      "lab"
+    ],
+    "submitted_at": {
+      "$date": "2022-11-24T10:15:00Z"
+    }
+  }
+]
