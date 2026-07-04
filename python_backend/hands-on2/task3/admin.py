@@ -1,3 +1,5 @@
+# changes to make in task1 for doing in task3 
+
 # task 3 
 
 from django.contrib import admin
