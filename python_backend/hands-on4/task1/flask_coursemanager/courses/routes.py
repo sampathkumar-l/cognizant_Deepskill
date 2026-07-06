@@ -90,7 +90,7 @@ def add_course():
 # GET Course By ID
 @courses_bp.route("/<int:course_id>", methods=["GET"])
 def get_course(course_id):
-
+  
     for course in courses:
         if course["id"] == course_id:
             return make_response_json(course, 200)
