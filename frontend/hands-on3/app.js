@@ -18,11 +18,11 @@ console.log('Formatted courses:', formatted);
 const heavyCourses = courses.filter(course => course.credits >= 4);
 console.log('Courses with 4+ credits:', heavyCourses.length);
 
-// reduce: total credits
+
 const totalCredits = courses.reduce((sum, course) => sum + course.credits, 0);
 console.log('Total credits:', totalCredits);
 
-/* ---------- Task 2: DOM Selection & Dynamic Rendering ---------- */
+
 
 const courseGrid = document.querySelector('.course-grid');
 const totalCreditsEl = document.getElementById('total-credits');
@@ -60,13 +60,12 @@ function updateTotalCredits(list) {
 renderCourses(courses);
 updateTotalCredits(courses);
 
-/* ---------- Task 3: Event Listeners & Interactivity ---------- */
+
 
 const searchInput = document.getElementById('search-courses');
 const sortButton = document.getElementById('sort-credits');
 const selectedCourseEl = document.getElementById('selected-course');
 
-// live search filter
 searchInput.addEventListener('input', (e) => {
   const term = e.target.value.toLowerCase();
   const filtered = courses.filter(c => c.name.toLowerCase().includes(term));
@@ -74,14 +73,13 @@ searchInput.addEventListener('input', (e) => {
   updateTotalCredits(filtered);
 });
 
-// sort by credits descending
+
 sortButton.addEventListener('click', () => {
   courses.sort((a, b) => b.credits - a.credits);
   renderCourses(courses);
   updateTotalCredits(courses);
 });
 
-// event delegation: single listener on the grid container
 courseGrid.addEventListener('click', (e) => {
   const card = e.target.closest('.course-card');
   if (!card) return;
