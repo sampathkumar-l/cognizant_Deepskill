@@ -1,0 +1,34 @@
+<section id="profile">
+  <h2>Student Profile</h2>
+
+  <!-- Task 3, step 104: form bound to the FormGroup via formGroup / formControlName -->
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" type="text" formControlName="name" />
+      <!-- Task 3, step 105: inline validation message -->
+      <p *ngIf="profileForm.get('name')?.touched && profileForm.get('name')?.invalid">
+        Name is required
+      </p>
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" />
+      <p *ngIf="profileForm.get('email')?.touched && profileForm.get('email')?.invalid">
+        Enter a valid email
+      </p>
+    </div>
+
+    <div>
+      <label for="semester">Semester</label>
+      <input id="semester" type="number" formControlName="semester" />
+      <p *ngIf="profileForm.get('semester')?.touched && profileForm.get('semester')?.invalid">
+        Semester must be between 1 and 8
+      </p>
+    </div>
+
+    <!-- Task 3, step 106: submit disabled until the form is valid -->
+    <button type="submit" [disabled]="profileForm.invalid">Submit</button>
+  </form>
+</section>

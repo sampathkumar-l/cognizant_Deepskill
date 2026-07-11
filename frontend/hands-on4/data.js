@@ -5,3 +5,4 @@ export const courses = [
   { id: 4, name: 'Operating Systems', code: 'CS204', credits: 4, grade: 'B' },
   { id: 5, name: 'Database Systems', code: 'CS210', credits: 3, grade: 'A' }
 ];
+

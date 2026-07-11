@@ -1,0 +1,27 @@
+<section id="courses">
+  <h2>Courses</h2>
+
+  <!-- Task 1, step 94: two-way binding with [(ngModel)] -->
+  <input
+    type="text"
+    placeholder="Search courses..."
+    [(ngModel)]="searchTerm"
+  />
+
+  <!-- Task 2, step 100: loading spinner shown while the HTTP call is pending -->
+  <p *ngIf="loading">Loading courses...</p>
+
+  <div class="course-grid" *ngIf="!loading">
+    <!-- Task 1, step 93: *ngFor renders a card per course, passing @Input()s -->
+    <app-course-card
+      *ngFor="let course of filteredCourses"
+      [name]="course.name"
+      [code]="course.code"
+      [credits]="course.credits"
+      [grade]="course.grade"
+    ></app-course-card>
+  </div>
+
+  <!-- Task 1, step 95: empty-state message -->
+  <p *ngIf="!loading && filteredCourses.length === 0">No courses found</p>
+</section>
