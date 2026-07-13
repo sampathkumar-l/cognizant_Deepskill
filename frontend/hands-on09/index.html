@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Portal — Accessible & Responsive</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2/dist/css-vars-ponyfill.min.js"></script>
+</head>
+<body>
+
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <p class="brand">Student Portal</p>
+
+  
+    <button
+      type="button"
+      id="nav-toggle"
+      class="nav-toggle"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+    >
+      Menu
+    </button>
+
+   
+    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      <ul>
+       
+        <li><a href="#hero" aria-current="page">Home</a></li>
+        <li><a href="#courses-section">Courses</a></li>
+        <li><a href="#profile-section">Profile</a></li>
+        <li><a href="#grades">Grades</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    
+    <section id="hero" class="hero">
+      <h1>Welcome to the Student Portal</h1>
+      <p>Track your courses, grades, and notifications in one place.</p>
+      <button type="button" id="explore-btn" class="btn-primary">Explore Courses</button>
+    </section>
+
+    <section class="stats-bar" aria-label="Student summary stats">
+      <div class="stat-item">
+        <span class="stat-value">3</span>
+        <span class="stat-label">Courses Enrolled</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">3.8</span>
+        <span class="stat-label">GPA</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">6</span>
+        <span class="stat-label">Semester</span>
+      </div>
+    </section>
+
+    <section id="courses-section" class="courses-section">
+      <h2>Your Courses</h2>
+
+      <!-- FIX (Step 125): search input has an associated <label> -->
+      <div class="search-row">
+        <label for="search-courses">Search courses</label>
+        <input type="text" id="search-courses" placeholder="Search courses..." />
+      </div>
+
+      <button type="button" id="sort-credits-btn" class="btn-primary">Sort by Credits</button>
+
+      
+      <p id="results-count" role="status" aria-live="polite">5 courses found</p>
+
+     
+      <div class="course-grid" id="course-grid" aria-label="Course list"></div>
+
+      <p id="selected-course" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="profile-section" class="profile-section">
+      <h2>Student Profile</h2>
+      <!-- FIX (Step 125): every input has a bound <label> -->
+      <form id="profile-form" novalidate>
+        <div class="form-row">
+          <label for="student-name">Full name</label>
+          <input type="text" id="student-name" name="name" required />
+        </div>
+        <div class="form-row">
+          <label for="student-email">Email address</label>
+          <input type="email" id="student-email" name="email" required />
+        </div>
+        <div class="form-row">
+          <label for="student-semester">Semester</label>
+          <input type="number" id="student-semester" name="semester" min="1" max="8" required />
+        </div>
+        <button type="submit" class="btn-primary">Save Profile</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#courses-section">Courses</a></li>
+        <li><a href="#profile-section">Profile</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2026 Digital Nurture 5.0 — Student Portal</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
